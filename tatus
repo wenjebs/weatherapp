@@ -1,0 +1,47 @@
+[33mcommit 764698fe8e282913a1d27f030a91f23b90b17fda[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: wenjie <wenjieb2@gmail.com>
+Date:   Sun Nov 13 01:23:32 2022 +0800
+
+    modify gitignore
+
+[33mcommit 018228db348cfecbaf24468a69f78016df1a3d4d[m
+Author: wenjie <wenjieb2@gmail.com>
+Date:   Sun Nov 13 01:22:55 2022 +0800
+
+    Initial dist subtree commit
+
+[33mcommit f48be6e99dcb841225383e57f505909b44ff3e62[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: wenjie <wenjieb2@gmail.com>
+Date:   Sun Nov 13 01:21:51 2022 +0800
+
+    Implement error handling and dom manipulation
+
+[33mcommit 673c86a5e3a5efa2b0f60be9356699987ec1ccd4[m
+Author: wenjie <wenjieb2@gmail.com>
+Date:   Sun Nov 13 00:42:03 2022 +0800
+
+    Add input eventlistener
+
+[33mcommit 6008fd9ca4d762aebbb7fb74ea03028a4e5fbc54[m
+Author: wenjie <wenjieb2@gmail.com>
+Date:   Sun Nov 13 00:23:56 2022 +0800
+
+    Style html and css
+
+[33mcommit 2bb3d0f116051454db0371306e3501435cb641a2[m
+Author: wenjie <wenjieb2@gmail.com>
+Date:   Sat Nov 12 23:22:18 2022 +0800
+
+    Implement fetching of api
+
+[33mcommit 20ae2ef25957e4af10cce8a29dd36e7936862300[m
+Author: wenjie <wenjieb2@gmail.com>
+Date:   Sat Nov 12 21:52:36 2022 +0800
+
+    Initial commit
+
+[33mcommit b75701b02f4b1865084a149d5af69ebfa0e12eb0[m
+Author: wen <107258917+wenjebs@users.noreply.github.com>
+Date:   Sat Nov 12 21:36:57 2022 +0800
+
+    Initial commit
