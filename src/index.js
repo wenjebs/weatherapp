@@ -12,33 +12,36 @@ async function fetchData (country) {
 
 function processData (country) {
   fetchData(country)
-    .then(function(data){ 
+    .then(function (data) {
       try {
         console.log(data)
-        let temperature = Math.round(data.main.temp)
-        let name = data.name
-        let description = data.weather[0].description
-        let feels = Math.round(data.main['feels_like'])
-        let humidity = data.main.humidity
-        let wind = data.wind.speed
-        editDom(temperature, name, description, feels, humidity, wind)
+        const temperature = Math.round(data.main.temp)
+        const name = data.name
+        const description = data.weather[0].description
+        const feels = Math.round(data.main.feels_like)
+        const humidity = data.main.humidity
+        const wind = data.wind.speed
+        const imgcode = data.weather[0].icon
+        editDom(temperature, name, description, feels, humidity, wind, imgcode)
       } catch {
         const error = document.querySelector('.error')
         error.style.display = 'block'
-        setTimeout(()=>{
-          error.style.display ='none'
+        setTimeout(() => {
+          error.style.display = 'none'
         }, 2000)
       }
     })
 }
 
-function editDom (temperature, name, description, feels, humidity, wind) {
+function editDom (temperature, name, description, feels, humidity, wind, imgcode) {
+  const weathercontainer = document.querySelector('.weather-data')
   const temperaturetext = document.querySelector('.temperature')
   const city = document.querySelector('.city')
   const describe = document.querySelector('.description')
   const feelslike = document.querySelector('.feelsLike')
   const humidtext = document.querySelector('.humidity')
   const windspeed = document.querySelector('.wind')
+  const img = document.getElementById('weatherimg')
   temperaturetext.textContent = temperature
   temperaturetext.innerHTML += '<span class="symbol">°C</span>'
   city.textContent = name
@@ -46,19 +49,26 @@ function editDom (temperature, name, description, feels, humidity, wind) {
   feelslike.textContent = 'FEELS LIKE: ' + feels + '°C'
   humidtext.textContent = 'HUMIDITY: ' + humidity + '%'
   windspeed.textContent = 'WIND SPEED: ' + wind + 'KM/H'
+  img.src = `https://openweathermap.org/img/wn/${imgcode}.png`
+  if (weathercontainer.classList.contains('fade-in2')) {
+    weathercontainer.classList.remove('fade-in2');
+    weathercontainer.offsetWidth;
+    weathercontainer.classList.add('fade-in2');
+  } else {
+    weathercontainer.classList.add('fade-in2');
+  }
 }
 
-
-function inputEventListener() {
+function inputEventListener () {
   const form = document.getElementById('form')
   form.addEventListener('submit', handleSubmit)
 }
 function handleSubmit (e) {
-  e.preventDefault();
+  e.preventDefault()
   const input = document.getElementById('input')
   const country = input.value
   processData(country)
-  input.value = '';
+  input.value = ''
 }
-inputEventListener();
-fetchData('singapore');
+inputEventListener()
+fetchData('singapore')
