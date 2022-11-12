@@ -8,13 +8,25 @@ async function fetchData (country) {
     if (weatherData.cod === '404') { alert('nope') }
     return weatherData
   } catch (err) {
-    console.log(err, 'bingbong')
+    alert('sorry the api broke bro :(')
   }
 }
 
-function processData() {
-    fetchData('Singapore')
-    .then(data=>console.log(data))
+function processData (country) {
+  fetchData(country)
+    .then(data => console.log(data))
 }
 
-console.log(processData())
+function handleSubmit (e) {
+  e.preventDefault();
+  const input = document.getElementById('input')
+  const country = input.value
+  processData(country)
+  input.value = '';
+}
+function inputEventListener() {
+  const form = document.getElementById('form')
+  form.addEventListener('submit', handleSubmit)
+}
+
+inputEventListener();

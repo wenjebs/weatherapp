@@ -36,7 +36,13 @@ form {
 #input::placeholder {
     color: white;
 }
-
+.error {
+    display: block;
+    color: red;
+    padding: 1rem;
+    font-weight: 700;
+    display: none;
+}
 .content-container {
     position: absolute;
     top: 30%;
