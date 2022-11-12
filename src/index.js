@@ -45,7 +45,7 @@ function editDom (temperature, name, description, feels, humidity, wind) {
   describe.textContent = description
   feelslike.textContent = 'FEELS LIKE: ' + feels + '°C'
   humidtext.textContent = 'HUMIDITY: ' + humidity + '%'
-  windspeed.textContent = 'WIND SPEED: ' + wind
+  windspeed.textContent = 'WIND SPEED: ' + wind + 'KM/H'
 }
 
 
