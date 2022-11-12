@@ -24,7 +24,8 @@
 form {
     padding: 1rem 2rem;
 }
-#input {
+#input,
+#input:-internal-autofill-selected {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 1rem 2rem;
     border: 0;
@@ -52,7 +53,7 @@ form {
 .city {
     font-size: 100px;
 }
-.cloud {
+.description {
     font-size: 25px;
 }
 .numbers {
