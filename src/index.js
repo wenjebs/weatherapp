@@ -26,9 +26,16 @@ function processData (country) {
       } catch {
         const error = document.querySelector('.error')
         error.style.display = 'block'
+        if (error.classList.contains('fade-in2')) {
+          error.classList.remove('fade-in2');
+          error.offsetWidth;
+          error.classList.add('fade-in2');
+        } else {
+          error.classList.add('fade-in2');
+        }
         setTimeout(() => {
           error.style.display = 'none'
-        }, 2000)
+        }, 5000)
       }
     })
 }
