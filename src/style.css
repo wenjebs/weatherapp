@@ -1,0 +1,73 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+* {
+    font-family: sans-serif;
+    color: white;
+}
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('galaxy.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+.header {
+    font-weight: 900;
+    font-size: xx-large;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+form {
+    padding: 1rem 2rem;
+}
+#input {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 10px;
+    font-size: large;
+    outline: none;
+    font-weight: lighter;
+}
+#input::placeholder {
+    color: white;
+}
+
+.content-container {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+.city {
+    font-size: 100px;
+}
+.cloud {
+    font-size: 25px;
+}
+.numbers {
+    display: flex;
+}
+.temperature {
+    display: inline;
+    font-size: 125px;
+}
+.symbol {
+    font-size: 25px;
+    position: absolute;
+    top: 10rem;
+}
+.mini-right {
+    margin: 1.5rem 5rem;
+    border-left: white solid 1px;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: smaller;
+}
