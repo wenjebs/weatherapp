@@ -49,7 +49,15 @@ form {
     top: 30%;
     left: 5%;
 }
-
+#date {
+    font-size: 50px;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#clock {
+    font-size: larger;
+    padding-left: 0.5rem;
+}
 .city {
     font-size: 100px;
 }
@@ -75,7 +83,7 @@ form {
 .symbol {
     font-size: 25px;
     position: absolute;
-    top: 10rem;
+    top: 16rem;
 }
 .mini-right {
     margin: 1.5rem 5rem;

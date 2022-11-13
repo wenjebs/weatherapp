@@ -1,3 +1,4 @@
+import currentTime from './modules/clock'
 import './style.css'
 
 async function fetchData (country) {
@@ -79,3 +80,4 @@ function handleSubmit (e) {
 }
 inputEventListener()
 fetchData('singapore')
+currentTime();
